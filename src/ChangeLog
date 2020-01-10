@@ -1,0 +1,957 @@
+commit 33920eb013628a5e22b7b32403fb965ae3210f47
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Wed Sep 23 21:52:04 2009 +0200
+
+    Update NEWS and release 2.20.0
+
+ NEWS |    6 ++++++
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
+commit 66b12f7d2f54143ea80b4f8aec863b26800363d6
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Wed Sep 23 21:51:43 2009 +0200
+
+    Bump version to 2.20.0
+
+ configure.ac |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 7bf87338a026ac82f908aa5fddf2bfea2daf6617
+Author: Brian Cameron <Brian.Cameron@sun.com>
+Date:   Wed Sep 23 12:11:50 2009 -0500
+
+    Updated uninstalled.pc file so that it contains the right paths for
+    defsdir files and codegen files.  See bug #596023.
+
+ pygobject-2.0-uninstalled.pc.in |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit d042402b7c649b2bed7f20038eb82518ec7cc9b3
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Tue Sep 22 22:02:27 2009 +0300
+
+    Plug reference leak of GSource in pyg_main_loop_init()
+
+    Bug #579406, second change.
+
+ glib/pygmainloop.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 640be8109d066e85ed77c810830a5f73c750415b
+Author: Frédéric Péters <fpeters@0d.be>
+Date:   Sun Aug 30 16:46:02 2009 +0200
+
+    Specify programming language in .devhelp file
+
+    This add a new language attribute (hardcoded to python) in the
+    .devhelp
+    file that is produced when using ref-html-style.xsl.
+
+ docs/xsl/devhelp.xsl |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit c888b5ca722fcad6a03de585606c677c2969ebd6
+Author: Paolo Borelli <pborelli@gnome.org>
+Date:   Thu Aug 13 21:32:07 2009 +0200
+
+    Allow to use automake 1.11
+
+ autogen.sh |   13 +++++++------
+ 1 files changed, 7 insertions(+), 6 deletions(-)
+
+commit 30deaba4bd1e199aab75cb346ee9237237807fbd
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Aug 11 22:19:50 2009 +0200
+
+    Update README
+
+ README |   10 ++++++++--
+ 1 files changed, 8 insertions(+), 2 deletions(-)
+
+commit af165d350d0d1bb493be5140bf84376d3da1e4d8
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Aug 11 22:16:52 2009 +0200
+
+    Update AUTHORS
+
+ AUTHORS |    8 +++++---
+ 1 files changed, 5 insertions(+), 3 deletions(-)
+
+commit 5f9f87f276b97964b525a501d8584ea8b4d8bfd2
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Aug 11 22:11:43 2009 +0200
+
+    Add myself and Paul as maintainers
+
+ MAINTAINERS    |    8 ++++++++
+ pygobject.doap |   14 ++++++++++++++
+ 2 files changed, 22 insertions(+), 0 deletions(-)
+
+commit 3bfae47fbcb5523d91fb2d1ed7ea347eeddd1775
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Aug 11 20:52:44 2009 +0200
+
+    Update NEWS release 2.19.0
+
+ NEWS |   29 +++++++++++++++++++++++++++++
+ 1 files changed, 29 insertions(+), 0 deletions(-)
+
+commit e82a1841f31ad54dd50569d0d45290713409e0bf
+Author: John Finlay <finlay@moeraki.com>
+Date:   Tue Aug 11 00:04:31 2009 -0700
+
+    Add macros to help with Python list to/from GList/GSList conversions.
+
+ gobject/pygobject.h |  242
+ ++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 files changed, 241 insertions(+), 1 deletions(-)
+
+commit f1fad96da2c531fbd3218923baa4fe806a2942d4
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sat Aug 8 21:37:54 2009 +0200
+
+    Bug 590063 – GFileInfo.list_attributes should accept None/NULL
+
+ gio/gfileinfo.override |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit b7907cf6ff6ccf8d38b5206f09f5c864c205e5de
+Author: Johan Dahlin <johan@gnome.org>
+Date:   Fri Jul 24 14:30:37 2009 -0300
+
+    Remove myself as a maintainer
+
+ MAINTAINERS    |    4 ----
+ pygobject.doap |    7 -------
+ 2 files changed, 0 insertions(+), 11 deletions(-)
+
+commit be6eb21320b4688bcfcd8cbea33f7be29a76f2a2
+Author: John Finlay <finlay@moeraki.com>
+Date:   Wed Jul 8 15:47:44 2009 -0700
+
+            * codegen/defsgen.py (clean_patterns): Strip out Windows
+            DLL API macros.
+
+ codegen/defsgen.py |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 2214cad3529979e29342a7e1fdc2915b90ce9c10
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Jun 23 21:18:23 2009 +0200
+
+    Fix the gio.unix namespace in docs
+
+ docs/Makefile.am                          |    2 ++
+ docs/reference/pygio-classes.xml          |    2 --
+ docs/reference/pygio-unixinputstream.xml  |   26
+ +++++++++++++-------------
+ docs/reference/pygio-unixoutputstream.xml |   26
+ +++++++++++++-------------
+ docs/reference/pygiounix-classes.xml      |   13 +++++++++++++
+ docs/reference/pygobject-ref.xml          |    1 +
+ 6 files changed, 42 insertions(+), 28 deletions(-)
+
+commit c0acaedfe7f4e488a490e07e3184f0709e1fadc2
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon Jun 22 23:13:36 2009 +0200
+
+    Add docs for gio functions (mostly for content types)
+
+ docs/Makefile.am                   |    2 +
+ docs/reference/pygio-classes.xml   |    1 +
+ docs/reference/pygio-functions.xml |  395
+ ++++++++++++++++++++++++++++++++++++
+ 3 files changed, 398 insertions(+), 0 deletions(-)
+
+commit ebddee47fb7f3e06f9e0a7a14b9532d5cf8a3881
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sun Jun 21 18:35:56 2009 +0200
+
+    Add docs for gio.Unix[In|Out]putStream classes
+
+ docs/Makefile.am                          |    4 +
+ docs/reference/pygio-classes.xml          |    2 +
+ docs/reference/pygio-unixinputstream.xml  |  202
+ +++++++++++++++++++++++++++++
+ docs/reference/pygio-unixoutputstream.xml |  202
+ +++++++++++++++++++++++++++++
+ 4 files changed, 410 insertions(+), 0 deletions(-)
+
+commit 5b71e58117c85634d95d08449eb54079b246e5be
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Sun Jun 21 16:50:03 2009 +0300
+
+    Document that many functions got moved gobject -> glib
+
+ docs/reference/pygobject-functions.xml |    7 +++++++
+ 1 files changed, 7 insertions(+), 0 deletions(-)
+
+commit b270dc43f2cef5260b0bbc71356fd8e6a2b7f754
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sat Jun 20 19:23:25 2009 +0200
+
+    Add docs for class gio.DataOutputStream
+
+ docs/Makefile.am                          |    2 +
+ docs/reference/pygio-classes.xml          |    1 +
+ docs/reference/pygio-dataoutputstream.xml |  504
+ +++++++++++++++++++++++++++++
+ 3 files changed, 507 insertions(+), 0 deletions(-)
+
+commit 549313fc4886fa3deb31761de6f5400708165d86
+Author: Murray Cumming <murrayc@murrayc.com>
+Date:   Thu Jun 18 18:48:37 2009 +0200
+
+    Allow h2def.py to work when there are tabs or multiple spaces after
+    the struct keyword.
+
+ codegen/h2def.py |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 5c36ef20dca8cd1793f2d3e88949675299097f40
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon Jun 15 23:02:34 2009 +0200
+
+    Add dpcs for class gio.DataInputStream
+
+ docs/Makefile.am                         |    2 +
+ docs/reference/pygio-classes.xml         |    1 +
+ docs/reference/pygio-constants.xml       |   66 +++
+ docs/reference/pygio-datainputstream.xml |  799
+ ++++++++++++++++++++++++++++++
+ 4 files changed, 868 insertions(+), 0 deletions(-)
+
+commit a8b36c343c6850af929c1d5a930f923831b4e637
+Author: Theppitak Karoonboonyanan <thep@linux.thai.net>
+Date:   Mon Jun 15 23:25:01 2009 +0300
+
+    Fix build when builddir is not the same as srcdir
+
+    Bug #585817.
+
+ girepository/Makefile.am |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 9d9ae97b8a49836ec1f3b8d6529bafe1cc06d4d7
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Mon Jun 15 23:19:47 2009 +0300
+
+    Make gio.Emblem constructor new-style
+
+    Add optional 'origin' parameter.  Expand gio.Emblem documentation and
+    mark gio.emblem_new_with_origin as sort-of-deprecated.
+
+ docs/reference/pygio-emblem.xml |   51
+ +++++++++++++++++++++++++++++++++++++-
+ gio/gio.defs                    |    5 ++-
+ 2 files changed, 52 insertions(+), 4 deletions(-)
+
+commit 268e1681fd5b46e6412d3a8db84f3f1cb02fdbde
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sat Jun 13 14:44:47 2009 +0200
+
+    Add docs for gio.BufferedOutputStream class
+
+ docs/Makefile.am                              |   96 +++++-----
+ docs/reference/pygio-bufferedoutputstream.xml |  275
+ +++++++++++++++++++++++++
+ docs/reference/pygio-classes.xml              |    1 +
+ 3 files changed, 325 insertions(+), 47 deletions(-)
+
+commit a6e25aaa7c8f27d62f2917b06728d7ccfcd46416
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sat Jun 13 14:38:34 2009 +0200
+
+    Fix gio.BufferedInputStream docs
+
+    Added the constructor reference and fixed a typo in properties header
+
+ docs/reference/pygio-bufferedinputstream.xml |   34
+ ++++++++++++++++++++++++-
+ 1 files changed, 32 insertions(+), 2 deletions(-)
+
+commit a9b13b60a5aad726d7d7dd7fdc5153b1561fb591
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sat Jun 13 01:25:06 2009 +0200
+
+    Add docs for gio.BufferedInputStream
+
+ docs/Makefile.am                             |    2 +
+ docs/reference/pygio-bufferedinputstream.xml |  431
+ ++++++++++++++++++++++++++
+ docs/reference/pygio-classes.xml             |    1 +
+ 3 files changed, 434 insertions(+), 0 deletions(-)
+
+commit 7766daa59b0e2b85413cee368bf2ebd2afe198e1
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Sun May 31 18:25:47 2009 +0300
+
+    Cleanup GIO overrides to use Python function/method names
+
+    Also move several gio.Mount overrides over from 'gio.override' to
+    existing 'gmount.override'.  Part of bug #584289.
+
+ gio/gfile.override           |   20 ++--
+ gio/gfileenumerator.override |    6 +-
+ gio/ginputstream.override    |    2 +-
+ gio/gio.override             |  204
+ ------------------------------------------
+ gio/gmount.override          |  204
+ ++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 218 insertions(+), 218 deletions(-)
+
+commit 07e9c18dc092f6546230168b6b69c1b3454e120a
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Sun May 31 18:56:55 2009 +0300
+
+    Make codegen report errors using Python function/method names
+
+    Part of bug #584289.
+
+ codegen/codegen.py     |    9 +++++----
+ codegen/definitions.py |   10 +++++++++-
+ 2 files changed, 14 insertions(+), 5 deletions(-)
+
+commit 235fde85d015382f2ba38b21968e82b3ac0b6612
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Fri Jun 12 00:12:17 2009 +0200
+
+    Fix object type in gio.BufferedInputStream_fill_async
+
+ gio/gbufferedinputstream.override |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 407b0e909056f15960e6a4e549896d786ce0a0b2
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Jun 9 00:08:21 2009 +0200
+
+    Wrap gio.BufferedInputStream.fill_async
+
+    Wrap the method gio.BufferedInputStream.fill_async and add a test
+
+ gio/Makefile.am                   |    1 +
+ gio/gbufferedinputstream.override |   70
+ +++++++++++++++++++++++++++++++++++++
+ gio/gio.override                  |    1 +
+ tests/test_gio.py                 |   25 +++++++++++++
+ 4 files changed, 97 insertions(+), 0 deletions(-)
+
+commit b7c96b41b287685fe57504e0add3a6f16e649975
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon Jun 8 15:42:40 2009 +0200
+
+    Add gio.BufferedOutputStream which was forgotten in the types
+    definition
+
+ gio/gio-types.defs |    7 +++++++
+ 1 files changed, 7 insertions(+), 0 deletions(-)
+
+commit 3666f75af4ef2c8e038116aee5afada59d59f689
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon Jun 8 14:20:02 2009 +0200
+
+    Add docs for gio.MemoryOutputStream
+
+ docs/Makefile.am                            |    2 +
+ docs/reference/pygio-classes.xml            |    1 +
+ docs/reference/pygio-memoryoutputstream.xml |  175
+ +++++++++++++++++++++++++++
+ 3 files changed, 178 insertions(+), 0 deletions(-)
+
+commit 6eb5e3988cbddb4afb3d5747364d6eb80370bb78
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon Jun 8 13:30:15 2009 +0200
+
+    Split overrides for gio.MemoryOutputStream
+
+ gio/Makefile.am                  |    1 +
+ gio/gio.override                 |    1 +
+ gio/gmemoryoutputstream.override |   45
+ ++++++++++++++++++++++++++++++++++++++
+ gio/goutputstream.override       |   24 --------------------
+ 4 files changed, 47 insertions(+), 24 deletions(-)
+
+commit dfbdf23633a772e78b47b0e7b0c3e3b87855d9ff
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon Jun 8 11:45:11 2009 +0200
+
+    Wrap gio.memory_input_stream_new_from_data
+
+    Add the wrapper for gio.memory_input_stream_new_from_data including
+    docs and a test.
+
+ docs/Makefile.am                           |    4 +-
+ docs/reference/pygio-classes.xml           |    1 +
+ docs/reference/pygio-memoryinputstream.xml |  151
+ ++++++++++++++++++++++++++++
+ gio/Makefile.am                            |    1 +
+ gio/ginputstream.override                  |   34 ------
+ gio/gio.override                           |    1 +
+ gio/gmemoryinputstream.override            |   91 +++++++++++++++++
+ tests/test_gio.py                          |    4 +
+ 8 files changed, 252 insertions(+), 35 deletions(-)
+
+commit fcc3cb0e167789746a1a9db0cba54ea7a97c7259
+Author: Simon van der Linden <simon.vanderlinden@student.uclouvain.be>
+Date:   Mon Jun 8 19:15:24 2009 +0200
+
+    Fixes whitespaces style issues with girepository.
+
+ girepository/Makefile.am       |    2 +-
+ girepository/bank-repository.c |   67
+ +++++++++++++++++++--------------------
+ girepository/bank.h            |    2 +-
+ girepository/btypes.py         |    6 ++--
+ girepository/module.py         |    2 +-
+ 5 files changed, 39 insertions(+), 40 deletions(-)
+
+commit fb4b2c8cdad2853e6bfe9526529e3a3ab052c5e0
+Author: Simon van der Linden <simon.vanderlinden@student.uclouvain.be>
+Date:   Fri Jun 5 19:03:59 2009 +0200
+
+    Removes the header but the modeline in test_girepository.py.
+
+ tests/test_girepository.py |   26 +-------------------------
+ 1 files changed, 1 insertions(+), 25 deletions(-)
+
+commit abe4828f52c7eb3a08f5b592e7ced1e97a58ef5c
+Author: Simon van der Linden <simon.vanderlinden@student.uclouvain.be>
+Date:   Wed Jun 3 10:47:58 2009 +0200
+
+    Adds overrides modules from PyBank.
+
+ girepository/Makefile.am           |    3 +++
+ girepository/importer.py           |    3 +--
+ girepository/overrides/Gdk.py      |   14 ++++++++++++++
+ girepository/overrides/Gtk.py      |    8 ++++++++
+ 4 files changed, 26 insertions(+), 2 deletions(-)
+
+commit c12964e6a3354d8063355225c94e6d21d621e08b
+Author: Simon van der Linden <simon.vanderlinden@student.uclouvain.be>
+Date:   Tue Jun 2 23:40:41 2009 +0200
+
+    Disables the tests that fail in tests/test_girepository.py.
+
+ tests/test_girepository.py |  242
+ +++++++++++++++++++++++++++++++++-----------
+ 1 files changed, 182 insertions(+), 60 deletions(-)
+
+commit a4469a3f7d32a25156bae5e7aef9ec4ae5f6e140
+Author: Simon van der Linden <simon.vanderlinden@student.uclouvain.be>
+Date:   Tue Jun 2 23:03:26 2009 +0200
+
+    Imports test_girepository.py from former PyBank's
+    everything_unittest.py.
+
+ tests/test_girepository.py |  288
+ ++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 288 insertions(+), 0 deletions(-)
+
+commit e4f2a5ef8734cf40cf8345d442612db1f6c62d5a
+Author: Simon van der Linden <simon.vanderlinden@student.uclouvain.be>
+Date:   Thu May 28 17:45:11 2009 +0200
+
+    Introduces the girepository module from the former PyBank.
+
+ INSTALL                        |   69 ++-
+ Makefile.am                    |    2 +-
+ configure.ac                   |   12 +
+ girepository/Makefile.am       |   52 ++
+ girepository/__init__.py       |   24 +
+ girepository/bank-argument.c   |  379 +++++++++++++
+ girepository/bank-info.c       | 1194
+ ++++++++++++++++++++++++++++++++++++++++
+ girepository/bank-repository.c |  237 ++++++++
+ girepository/bank.c            |  155 ++++++
+ girepository/bank.h            |   80 +++
+ girepository/btypes.py         |  300 ++++++++++
+ girepository/importer.py       |   52 ++
+ girepository/module.py         |  224 ++++++++
+ girepository/repository.py     |   51 ++
+ 14 files changed, 2799 insertions(+), 32 deletions(-)
+
+commit f5ab5046fe9b67ec5e8fc64679e1a3d01787af7e
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Jun 2 18:28:22 2009 +0200
+
+    Fix the docs for gio.FilterOutputStream
+
+ docs/reference/pygio-filteroutputstream.xml |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+commit fded60d8376fc45d19bf6cd8be6b927cc3f2e8c6
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Jun 2 18:27:00 2009 +0200
+
+    Add gio.FilterOutputStream docs
+
+ docs/Makefile.am                            |    2 +
+ docs/reference/pygio-classes.xml            |    1 +
+ docs/reference/pygio-filteroutputstream.xml |  152
+ +++++++++++++++++++++++++++
+ 3 files changed, 155 insertions(+), 0 deletions(-)
+
+commit e2c31f916967229b6547e68013628ce0082cf875
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Jun 2 13:29:59 2009 +0200
+
+    Add gio.FilterInputStream docs
+
+ docs/Makefile.am                           |    2 +
+ docs/reference/pygio-classes.xml           |    1 +
+ docs/reference/pygio-filterinputstream.xml |  152
+ ++++++++++++++++++++++++++++
+ 3 files changed, 155 insertions(+), 0 deletions(-)
+
+commit 49a467eee445bc75554db0374006722ac075194b
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Jun 2 11:33:20 2009 +0200
+
+    Add API appeared in 2.20 but not marked as such in gio docs
+
+ gio/gio.defs |   30 ++++++++++++++++++++++++++++++
+ 1 files changed, 30 insertions(+), 0 deletions(-)
+
+commit 180c157f2a20b7d2dd9af05bfb5f515fd23870a0
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Jun 2 10:41:26 2009 +0200
+
+    Wrap gio.FileOutputStream.query_info_async
+
+    Add the wrapper for gio.FileOutputStream.query_info_async
+    including docs and a test.
+
+ docs/Makefile.am                          |    2 +
+ docs/reference/pygio-classes.xml          |    1 +
+ docs/reference/pygio-fileoutputstream.xml |  257
+ +++++++++++++++++++++++++++++
+ gio/Makefile.am                           |    3 +-
+ gio/gfileoutputstream.override            |   68 ++++++++
+ gio/gio.override                          |    1 +
+ tests/test_gio.py                         |   27 +++
+ 7 files changed, 358 insertions(+), 1 deletions(-)
+
+commit 4673577d1f6c3d54423808dd575987092fb05ad2
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue Jun 2 10:17:41 2009 +0200
+
+    Fix gio.FileInputStream docs
+
+    Add implemented interface section and remove a method description
+
+ docs/reference/pygio-fileinputstream.xml |   25 +++++++++----------------
+ 1 files changed, 9 insertions(+), 16 deletions(-)
+
+commit 1e1cad02879d514745b5233658654cbe944530a5
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon Jun 1 22:54:26 2009 +0200
+
+    Fix the method name
+
+ gio/gfileinputstream.override |   14 +++++++-------
+ 1 files changed, 7 insertions(+), 7 deletions(-)
+
+commit f605811afe8c91f121e89b6f9ec28c70b62f4110
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon Jun 1 22:40:56 2009 +0200
+
+    Wrap gio.FileInputStream.query_async
+
+    Add the wrapper for gio.FileInputStream.query_async including docs and
+    a test.
+
+ docs/Makefile.am                         |    2 +
+ docs/reference/pygio-classes.xml         |    1 +
+ docs/reference/pygio-fileinputstream.xml |  221
+ ++++++++++++++++++++++++++++++
+ gio/Makefile.am                          |    1 +
+ gio/gfileinputstream.override            |   68 +++++++++
+ gio/gio.override                         |    1 +
+ tests/test_gio.py                        |   27 ++++
+ 7 files changed, 321 insertions(+), 0 deletions(-)
+
+commit 08623e54a426377c1504b5c364aabae5a17f8ad8
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Sun May 31 17:43:16 2009 +0300
+
+    Install executable codegen parts with executing permissions
+
+    Also add shebang where it was missing.  Bug #583979.
+
+ codegen/Makefile.am      |   23 ++++++++++++-----------
+ codegen/code-coverage.py |    2 ++
+ codegen/codegen.py       |    2 ++
+ codegen/defsconvert.py   |    2 ++
+ 4 files changed, 18 insertions(+), 11 deletions(-)
+
+commit 833d4da202bcfcb01a414f8aec4b751ec8e1ccb2
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Sat May 30 16:57:49 2009 +0300
+
+    Wrap gio.DataInputStream.read_line_async and read_until_async
+
+    Wrap the functions and their corresponding *_finish() functions.
+    Create 'gdatainputstream.override' for these and move two existing
+    functions there.  Add unit tests.  Re-enable synchronous read_line
+    unit test and adjust it for new official GIO behavior.  Bug #584285.
+
+ gio/Makefile.am               |    1 +
+ gio/gdatainputstream.override |  250
+ +++++++++++++++++++++++++++++++++++++++++
+ gio/ginputstream.override     |   65 -----------
+ gio/gio.defs                  |    4 +-
+ gio/gio.override              |    1 +
+ tests/test_gio.py             |   51 ++++++++-
+ 6 files changed, 300 insertions(+), 72 deletions(-)
+
+commit 2cb569c0ced49f9ed5ca83292d5f15c837066688
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Sat May 30 17:24:15 2009 +0300
+
+    Fix gio.OutputStream.splice_async
+
+    Bug #584290.
+
+ gio/goutputstream.override |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit e43fa429f6b4019a432acb481bbc07c8201cc46d
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Wed May 27 21:19:27 2009 +0300
+
+    Code maintenance: ignore one more file created by unit tests
+
+ tests/.gitignore |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 76e9dc74ac706a9207f9d31f887d6e38df2a678f
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon May 25 20:20:38 2009 +0200
+
+    Update the docs with new 2.20 API
+
+ docs/reference/pygio-appinfo.xml |  115 ++++++++++++++++++++++++++++
+ docs/reference/pygio-icon.xml    |   99 +++++++++++++++++++++++-
+ docs/reference/pygio-mount.xml   |  156
+ ++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 367 insertions(+), 3 deletions(-)
+
+commit 8e40d71ac23deb7d91789486ee8cad440a6be1dd
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon May 25 01:33:08 2009 +0200
+
+    Add gio 2.20 API
+
+    add the new API added in gio 2.20, some needs to be wrapped manually
+
+ gio/gio.defs  |  106
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ gio/unix.defs |   48 +++++++++++++++++++++----
+ 2 files changed, 146 insertions(+), 8 deletions(-)
+
+commit 0d08df42514fba6abc896814abfee0d2d083c29e
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon May 25 00:14:21 2009 +0200
+
+    Post release version bump 2.19.0
+
+ configure.ac |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit edfb09e3de7baf294b3beba84b4ecb94e1f16764
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sun May 24 23:56:29 2009 +0200
+
+    Update NEWS, release 2.18.0
+
+ NEWS         |   14 ++++++++++++++
+ configure.ac |    4 ++--
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+
+commit e0648ea435e0b309cdd5bb0ebe56d4534efd26e4
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sun May 24 22:18:40 2009 +0200
+
+    Add documentation for the gio.OutputStream class
+
+    The docs for this class are not completed, missing methods
+    descriptions.
+    The index is complete though, it will be completed once all the
+    classes
+    are in place so we can ship a (almost) complete reference.
+
+ docs/Makefile.am                      |    2 +
+ docs/reference/pygio-classes.xml      |    3 +-
+ docs/reference/pygio-outputstream.xml |  140
+ +++++++++++++++++++++++++++++++++
+ 3 files changed, 144 insertions(+), 1 deletions(-)
+
+commit 11524cdf6472d9115a812ce431f6767aec5627bc
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sun May 24 22:12:04 2009 +0200
+
+    Wrap gio.OutputStream.splice_async()
+
+    wrap gio.OutputStream.splice_async() and add a test.
+
+ gio/goutputstream.override |   58
+ +++++++++++++++++++++++++++++++++++++++++++-
+ tests/test_gio.py          |   20 +++++++++++++++
+ 2 files changed, 77 insertions(+), 1 deletions(-)
+
+commit 82ad6b8c8ea4d6694126f5e0e67b826717e38f19
+Author: Emilio Pozuelo Monfort <pochu@ubuntu.com>
+Date:   Sun May 24 22:55:16 2009 +0300
+
+    Add Python version into installed libpyglib name
+
+    Do this now, while no-one (as far as we know) links to the library
+    besides PyGObject itself.  Bug #550235.
+
+ configure.ac        |    2 ++
+ gio/Makefile.am     |    2 +-
+ glib/Makefile.am    |   10 +++++-----
+ gobject/Makefile.am |    2 +-
+ 4 files changed, 9 insertions(+), 7 deletions(-)
+
+commit 59da8cd24ea390b6c983995833ec6b0e5d028b35
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sun May 24 11:44:24 2009 +0200
+
+    Wrap gio.OutputStream.flush_async()
+
+    wrap gio.OutputStream.flush_async() and add a test.
+
+ gio/goutputstream.override |   47
+ +++++++++++++++++++++++++++++++++++++++++++-
+ tests/test_gio.py          |   11 ++++++++++
+ 2 files changed, 57 insertions(+), 1 deletions(-)
+
+commit 84ab6178ed0033f69932df5bc73c86bdff80c953
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sun May 17 17:29:37 2009 +0200
+
+    Add documentation for the gio.FileMonitor class
+
+    The docs for this class are not completed, missing methods
+    descriptions.
+    The index is complete though, it will be completed once all the
+    classes
+    are in place so we can ship a (almost) complete reference.
+
+ docs/Makefile.am                     |    2 +
+ docs/reference/pygio-classes.xml     |    1 +
+ docs/reference/pygio-filemonitor.xml |  128
+ ++++++++++++++++++++++++++++++++++
+ 3 files changed, 131 insertions(+), 0 deletions(-)
+
+commit 629496a5617d30e4dfa494b05a62c85a6af77b9a
+Author: Josselin Mouette <joss@malsain.org>
+Date:   Sun May 17 18:03:44 2009 +0300
+
+    Use 'Requires.private' for libffi in '.pc' files
+
+    Correction for patch in bug #550231.
+
+ pygobject-2.0-uninstalled.pc.in |    3 ++-
+ pygobject-2.0.pc.in             |    3 ++-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+commit 90cd8b7c4a25cd2ecb751f8337b401c98538272b
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Wed May 13 21:54:39 2009 +0200
+
+    Add wrapper for gio.FileAttributeMatcher
+
+    added a boxed type for gio.FileAttributeMatcher which has been
+    forgotten while
+    wrapping the gio API. This should probably be done in gio itself.
+
+ gio/gfileinfo.override |   24 ++++++++++++++++++++++--
+ gio/gio-types.defs     |    7 +++++++
+ gio/gio.override       |    2 ++
+ 3 files changed, 31 insertions(+), 2 deletions(-)
+
+commit e707447d9313f2f2ecba395cfe3682d5a5e859f4
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Wed May 13 22:06:25 2009 +0300
+
+    Mark relevant glib.IOChannel methods as METH_NOARGS
+
+    Additionally fix glib.IOChannel.set_close_on_unref: was marked
+    METH_NOARGS but actually accepted arguments.  Fixes bug #582427.
+
+ glib/pygiochannel.c |   83
+ ++++++++++++--------------------------------------
+ 1 files changed, 20 insertions(+), 63 deletions(-)
+
+commit 002915e5f458fec5a89766a54e8119a70a80caa7
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Tue May 12 20:37:24 2009 +0200
+
+    Add documentation for the gio.FileInfo class
+
+    The docs for this class are not completed, missing methods
+    descriptions.
+    The index is complete though, it will be completed once all the
+    classes
+    are in place so we can ship a (almost) complete reference.
+
+ docs/Makefile.am                  |    2 +
+ docs/reference/pygio-classes.xml  |    1 +
+ docs/reference/pygio-fileinfo.xml |  346
+ +++++++++++++++++++++++++++++++++++++
+ 3 files changed, 349 insertions(+), 0 deletions(-)
+
+commit 8cd25c871609580425c6c4c9e5bc6ec8d40862a1
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Sat May 9 16:46:04 2009 +0300
+
+    Retire hand-written ChangeLog; autocreate from Git history
+
+    Basically copied over from GLib source tree.
+
+ ChangeLog          | 3606
+ ---------------------------------------------------
+ ChangeLog.pre-2.18 | 3608
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Makefile.am        |   32 +
+ 3 files changed, 3640 insertions(+), 3606 deletions(-)
+
+commit 23556bdbcf9cf06db866901fb822dd78a9043648
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sat May 9 00:03:05 2009 +0200
+
+    Fix a bug in InputStream.skip_async
+
+    use the count argument instead of buffer_size which is always zero
+
+ gio/ginputstream.override |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit ed6b06315c17441b41c001d38537c904b8fe18de
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sat May 9 00:02:33 2009 +0200
+
+    Add docs for the gio.InputStream class
+
+ docs/Makefile.am                     |    2 +
+ docs/reference/pygio-classes.xml     |    1 +
+ docs/reference/pygio-inputstream.xml |  730
+ ++++++++++++++++++++++++++++++++++
+ 3 files changed, 733 insertions(+), 0 deletions(-)
+
+commit d58322b84d47da7905f95b43e9e0daf9f7c4b507
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Mon May 4 23:40:28 2009 +0200
+
+    Wrap gio.InputStream.skip_async()
+
+    wrap gio.InputStream.skip_async() and add a test.
+
+ gio/ginputstream.override |   50
+ ++++++++++++++++++++++++++++++++++++++++++++-
+ tests/test_gio.py         |   20 ++++++++++++++++++
+ 2 files changed, 69 insertions(+), 1 deletions(-)
+
+commit 2311187824d1b48a996ee2620fd3c9a63e3edd66
+Author: Siavash Safi <siavash@siavashs.org>
+Date:   Mon May 4 15:46:49 2009 +0430
+
+    Add -n --namespace option and the code to remove
+    dll API in headers, Added documentation
+
+    Patch from bug #579275
+
+ ChangeLog        |    8 +++
+ codegen/h2def.py |  133
+ ++++++++++++++++++++++++++++++++++++++++++++----------
+ 2 files changed, 117 insertions(+), 24 deletions(-)
+
+commit 442ec5bb997bb7dab55baeea6e54e79d3ce0d3c1
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Sat May 2 23:54:52 2009 +0300
+
+    Properly mark glib.get_user_special_dir() as a keywords method
+
+    Fixes bug #581082.
+
+ glib/glibmodule.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit f466dca880cc6ea68b9fe236943eea7a07d33520
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sun May 3 11:03:25 2009 +0200
+
+    Add docs for the gio.LoadableIcon class
+
+ docs/Makefile.am                      |    2 +
+ docs/reference/pygio-classes.xml      |    1 +
+ docs/reference/pygio-loadableicon.xml |  198
+ +++++++++++++++++++++++++++++++++
+ 3 files changed, 201 insertions(+), 0 deletions(-)
+
+commit eab4ebf7f6c82580b61205f34e1cfe535aeada60
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sun May 3 01:21:55 2009 +0200
+
+    Add docs for the gio.ThemedIcon class
+
+ docs/Makefile.am                    |    2 +
+ docs/reference/pygio-classes.xml    |    1 +
+ docs/reference/pygio-themedicon.xml |  204
+ +++++++++++++++++++++++++++++++++++
+ 3 files changed, 207 insertions(+), 0 deletions(-)
+
+commit 22d7de8b620055f14b30f9c3c99160c8b4ebe672
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Sat May 2 12:25:19 2009 +0200
+
+    post release version bump to 2.17.1
+
+ configure.ac |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 282ac3c76e1e3513bd76f819f320ec56aba15d9e
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Fri May 1 23:40:31 2009 +0200
+
+    Fix the class title
+
+ docs/reference/pygio-mountoperation.xml |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit d8b70dec1e5c09b73ae277f4f5b246315841fb8e
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Fri May 1 22:24:33 2009 +0200
+
+    Add docs for the gio.MountOperation class
+
+ docs/Makefile.am                        |    2 +
+ docs/reference/pygio-classes.xml        |    1 +
+ docs/reference/pygio-constants.xml      |  107 +++++
+ docs/reference/pygio-mountoperation.xml |  726
+ +++++++++++++++++++++++++++++++
+ 4 files changed, 836 insertions(+), 0 deletions(-)
+
+commit fceea8e843e880f0469e454df23141e7dd2bc0cf
+Author: Gian Mario Tagliaretti <gianmt@gnome.org>
+Date:   Thu Apr 30 22:13:06 2009 +0200
+
+    Update NEWS, release 2.17.0
+
+ NEWS |   93
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 93 insertions(+), 0 deletions(-)
+
+commit 47389217d1a65a8e3f404d486c508cf5d3164756
+Author: Paul Pogonyshev <pogonyshev@gmx.net>
+Date:   Thu Apr 30 22:47:19 2009 +0300
+
+    Fix memory leak in gio.File.query_info_async()
+
+    After the recent patch it would leak exception data if old argument
+    order was used.  Properly decref the objects.
+
+ gio/gfile.override |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
