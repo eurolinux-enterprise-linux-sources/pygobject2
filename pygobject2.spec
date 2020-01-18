@@ -2,7 +2,7 @@
 
 Name: pygobject2
 Version: 2.28.6
-Release: 11%{?dist}
+Release: 9%{?dist}
 License: LGPLv2+
 Group: Development/Languages
 Summary: Python 2 bindings for GObject 
@@ -123,12 +123,6 @@ rm examples/Makefile*
 %{_datadir}/pygobject/xsl
 
 %changelog
-* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 2.28.6-11
-- Mass rebuild 2014-01-24
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2.28.6-10
-- Mass rebuild 2013-12-27
-
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.28.6-9
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
